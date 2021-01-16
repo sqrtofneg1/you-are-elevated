@@ -18,5 +18,8 @@
       "all_frames": true
     }
   ],
+  "icons":{
+    "128": "you-are-elevated-128p.png"
+  },
   "manifest_version": 2
 }
