@@ -8,9 +8,10 @@ var pageConditions = {
 }
 
 
-// Background.js
 chrome.runtime.onInstalled.addListener(function(){
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function(){
     chrome.declarativeContent.onPageChanged.addRules([pageConditions]);//When we're allowing users to use app
   });
+  
+  
 });
