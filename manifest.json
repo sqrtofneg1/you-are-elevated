@@ -21,5 +21,9 @@
   "icons":{
     "128": "you-are-elevated-128p.png"
   },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "manifest_version": 2
 }

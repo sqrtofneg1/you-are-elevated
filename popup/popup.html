@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>You Are Elevated</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="popup.css">
@@ -9,14 +10,18 @@
   </head>
   <body>
     <h5><img src="../you-are-elevated-128p.png" alt="logo" width="64" height="64">You Are Elevated!</h5>
+    <h6><small>Elevates your URL opening experience!</small></h6>
+    <hr class="my-2">
     <div class="container">
-      <button class="btn btn-dark" id="open-highlighted">Open highlighted links</button>
-      <br/><br/>
-      <button class="btn btn-dark" id="open-specified">Open links that include (highlighted)</button>
+      <button class="btn btn-dark" id="open-selected">Open all selected links</button>
+      <hr class="my-2">
+      <button class="btn btn-dark" id="open-specified">Open links from selection that include:</button>
       <textarea class="form-control" id="url-value" placeholder="reddit.com&#10;/profile/"></textarea>
-      <br/><br/>
-      <button class="btn btn-dark" id="open-specified-all">Open links that include (whole page):</button>
+      <hr class="my-2">
+      <button class="btn btn-dark" id="open-specified-all">Open links from whole page that include:</button>
       <textarea class="form-control" id="url-value2" placeholder="youtube.com&#10;.pdf"></textarea>
+      <hr class="my-2">
+      <button class="btn btn-dark" id="go-to-options">Go to options</button>
       <script src="popup.js"></script>
     </div>
   </body>

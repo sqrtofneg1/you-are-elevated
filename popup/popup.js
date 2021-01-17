@@ -1,9 +1,10 @@
-let getHighlightedButton = document.getElementById('open-highlighted');
+let getSelectedButton = document.getElementById('open-selected');
 let getLinksSpecified = document.getElementById('open-specified');
 let getLinksSpecifiedAll = document.getElementById('open-specified-all');
+let getOptions = document.getElementById('go-to-options');
 
 //Highlighted links
-getHighlightedButton.onclick = function(element) {
+getSelectedButton.onclick = function(element) {
   chrome.tabs.query({active: true, currentWindow: true}, 
   function(tab) {
     chrome.tabs.sendMessage(tab[0].id, {method: "getSelection"}, 
@@ -88,4 +89,12 @@ getLinksSpecifiedAll.onclick = function(element) {
       }
     });
   });
+};
+
+getOptions.onclick = function(element) {
+  if (chrome.runtime.openOptionsPage) {
+    chrome.runtime.openOptionsPage();
+  } else {
+    window.open(chrome.runtime.getURL('../options.html'));
+  }
 };
