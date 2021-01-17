@@ -8,7 +8,15 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     });
     console.log(linkArray);
     sendResponse({data: linkArray});
-  }else{
+  } else if (request.method == "getAll"){
+    var listOfAnchors = document.body.querySelectorAll("a");
+    let linkArray = []; 
+    listOfAnchors.forEach(function(hrefvalue){
+      linkArray.push(hrefvalue.href);
+    });
+    console.log(linkArray);
+    sendResponse({data: linkArray});
+  } else{
     sendResponse({});
   }
 });
