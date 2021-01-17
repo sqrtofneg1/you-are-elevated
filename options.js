@@ -4,16 +4,16 @@ function save_options() {
   console.log(links_to_open);
   chrome.storage.sync.set({
     saved: links_to_open
-  }, function() {
+  }, function () {
     // Update status to let user know options were saved.
     buildMenu();
     var status = document.getElementById('status');
     status.textContent = 'Options saved.';
-    setTimeout(function() {
+    setTimeout(function () {
       status.textContent = '';
     }, 750);
   });
-}
+};
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
@@ -21,16 +21,16 @@ function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
     saved: ''
-  }, function(items) {
+  }, function (items) {
     document.getElementById('savehref').value = items.saved;
   });
-}
+};
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
 
 //builds the context menu.
-function buildMenu(){
+function buildMenu() {
   chrome.contextMenus.removeAll(function () {
     chrome.contextMenus.create({
       title: "Open all highlighted links",

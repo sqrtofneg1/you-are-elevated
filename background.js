@@ -38,7 +38,7 @@ function listenerFunction(information, tab) {
           });
       });
 
-  //Open all with specified options
+    //Open all with specified options
   } else if (information.menuItemId == "openAllOptions") {
     chrome.tabs.query({
         active: true,
@@ -81,7 +81,7 @@ function listenerFunction(information, tab) {
           });
       });
 
-  //Open highlighted with specified options
+    //Open highlighted with specified options
   } else if (information.menuItemId == "openAllOptionsHighlighted") {
     chrome.tabs.query({
         active: true,
@@ -137,7 +137,7 @@ chrome.runtime.onInstalled.addListener(function () {
 
 
 //builds the context menu.
-function buildMenu(){
+function buildMenu() {
   chrome.contextMenus.removeAll(function () {
     chrome.contextMenus.create({
       title: "Open all highlighted links",

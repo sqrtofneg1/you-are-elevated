@@ -1,6 +1,6 @@
 {
   "name": "You Are Elevated",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Extension that elevates your URL opening experience.",
   "background": {
     "scripts": ["background.js"],
