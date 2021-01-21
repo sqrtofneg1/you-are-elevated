@@ -15,10 +15,7 @@ function save_options() {
   });
 };
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
 function restore_options() {
-  // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
     saved: ''
   }, function (items) {
@@ -53,7 +50,4 @@ function buildMenu() {
       });
     });
   });
-
-  //One listener, uses OnClickData to find which menu item was clicked.
-  chrome.contextMenus.onClicked.addListener(listenerFunction);
 };

@@ -9,7 +9,7 @@
   "page_action": {
     "default_popup": "/popup/popup.html"
   },
-  "permissions": ["tabs", "activeTab", "declarativeContent", "storage", "contextMenus"],
+  "permissions": ["activeTab", "declarativeContent", "storage", "contextMenus"],
   "content_scripts": [
     {
       "matches":["<all_urls>"], 
